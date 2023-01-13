@@ -1,3 +1,4 @@
 geckodriver 2
 *.log
 *.xlsx
+.DS_Store
