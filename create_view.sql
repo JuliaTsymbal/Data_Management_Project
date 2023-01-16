@@ -25,11 +25,4 @@ SELECT   fd.fandom_url,
         im.reviews_amount,
         im.creation_time AS imdb_creation_time
 FROM scraping_fandom_episode as fd
-LEFT JOIN scraping_imdb_episode as im ON fd.episode_number_absolute=im.episode_number_absolute;
-
-
-17 December 1989 	
-
-UPDATE scraping_imdb_episode
-SET airdate = '1989-12-17'
-WHERE episode_number_absolute == 1; 
+INNER JOIN scraping_imdb_episode as im ON fd.episode_number_absolute=im.episode_number_absolute;
